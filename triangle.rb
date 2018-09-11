@@ -13,8 +13,18 @@
 # and
 #   about_triangle_project_2.rb
 #
+require 'Set'
+
 def triangle(a, b, c)
-  # WRITE THIS CODE
+  uniq_sides_total = Set.new([a, b, c]).size
+  case uniq_sides_total
+  when 1
+    :equilateral
+  when 2
+    :isosceles
+  else
+    :scalene
+  end
 end
 
 # Error class used in part 2.  No need to change this code.
